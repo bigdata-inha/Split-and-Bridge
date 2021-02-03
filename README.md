@@ -1,6 +1,5 @@
 # Split-and-Bridge
-Split-and-Bridge: Adaptable Class Incremental Learning within a Single Neural Network 
-in AAAI2021 by Jong-Yeong Kim and Dong-Wan Choi
+Split-and-Bridge: Adaptable Class Incremental Learning within a Single Neural Network \nin AAAI2021 by Jong-Yeong Kim and Dong-Wan Choi
 
 <img src="https://user-images.githubusercontent.com/74110603/98468351-6d6a2180-221d-11eb-96ce-ad416da90100.png" width="85%" height="80%">
 
