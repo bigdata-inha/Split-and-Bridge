@@ -175,7 +175,7 @@ if __name__ == '__main__':
         best_acc = 0
         best_model = None
 
-        # Running nepochs epochs   step 1 ###############################################################################
+        # weight sparsification ###############################################################################
         print('Flag: %d' % flag)
         for epoch in range(0, total_epochs):
             if flag or balance_factor == 1:
@@ -233,12 +233,12 @@ if __name__ == '__main__':
 
             print(results_1)
 
-        # split ###################################################################################
+        #explicitly split ###################################################################################
         if t > 0 and balance_factor != 1:
             myTrainer.split()
             print(myTrainer.model)
 
-        # Running nepochs epochs   step 2 #########################################################
+        # separated learning (split learning) #########################################################
         if t > 0 and balance_factor != 1:
             best_acc = 0
             best_model = None
@@ -312,7 +312,7 @@ if __name__ == '__main__':
         if t > 0 and balance_factor != 1:
             myTrainer.reunion()
 
-        # Running nepochs epochs   step 3 ####################################################
+        # bridge phase ####################################################
         best_acc = 0
         best_model = None
 
