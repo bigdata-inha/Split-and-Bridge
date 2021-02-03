@@ -68,7 +68,7 @@ class Trainer(trainer.GenericTrainer):
         self.optimizer_single = optimizer
 
 
-    def first_train(self, epoch):
+    def sparsification(self, epoch):
 
         T = 2
         self.model.train()
@@ -119,7 +119,7 @@ class Trainer(trainer.GenericTrainer):
                 weight = self.model.fc.linear.weight.data
                 weight[weight < 0] = 0
 
-    def second_train(self, epoch):
+    def split_train(self, epoch):
 
         T = 2
         self.model.train()
@@ -156,7 +156,7 @@ class Trainer(trainer.GenericTrainer):
             (loss_KD + loss_CE).backward()
             self.optimizer.step()
 
-    def third_train(self, epoch):
+    def bridge_train(self, epoch):
 
         T = 2
         self.model.cuda()

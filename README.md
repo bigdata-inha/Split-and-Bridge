@@ -1,6 +1,10 @@
 # Split-and-Bridge
+<<<<<<< HEAD
 Split-and-Bridge: Adaptable Class Incremental Learning within a Single Neural Network
-To appear in Proceedings of the 35th AAAI Conference on Artificial Intelligence (AAAI), 2021.
+=======
+Split-and-Bridge: Adaptable Class Incremental Learning within a Single Neural Network 
+in AAAI2021 by Jong-Yeong Kim and Dong-Wan Choi
+>>>>>>> d0d3b204ec02574551078372d323eb5336d52492
 
 <img src="https://user-images.githubusercontent.com/74110603/98468351-6d6a2180-221d-11eb-96ce-ad416da90100.png" width="85%" height="80%">
 

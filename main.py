@@ -181,7 +181,7 @@ if __name__ == '__main__':
             if flag or balance_factor == 1:
                 break
             myTrainer.update_lr(epoch, schedule)
-            myTrainer.first_train(epoch)
+            myTrainer.sparsification(epoch)
 
             train_1 = t_classifier.evaluate(myTrainer.model, evaluator_iterator, 0, train_end)
             print("*********CURRENT EPOCH********** : %d" % epoch)
@@ -256,7 +256,7 @@ if __name__ == '__main__':
                 break
 
             myTrainer.update_lr(epoch, schedule)
-            myTrainer.second_train(epoch)
+            myTrainer.split_train(epoch)
 
             train_1 = t_classifier.evaluate(myTrainer.model, evaluator_iterator, 0, train_end)
             print("*********CURRENT EPOCH********** : %d" % epoch)
@@ -329,7 +329,7 @@ if __name__ == '__main__':
             if t == 0:
                 break
             myTrainer.update_lr(epoch, schedule)
-            myTrainer.third_train(epoch)
+            myTrainer.bridge_train(epoch)
 
             train_1 = t_classifier.evaluate(myTrainer.model, evaluator_iterator, 0, train_end)
             print("*********CURRENT EPOCH********** : %d" % epoch)
